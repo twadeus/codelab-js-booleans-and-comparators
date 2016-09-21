@@ -3,19 +3,23 @@
     <meta charset="UTF-8">
     <title>codelab-js-booleans-and-comparators</title>
     <script>
-     
+
     var walkdownhall = prompt("Do you want to walk down the hall? Yes or No");
 
-    if (walkdownhall === "Yes"){
+    if (walkdownhall.trim().toLowerCase( ) === "yes"){
         var enterroom  = prompt("Do you want to enter the room? Yes or No")
-        if (enterroom === "Yes"){
+        if (enterroom.trim().toLowerCase( ) === "yes"){
           alert("You Are now in the room. Sit down and enjoy class.")
-        } else {
+        } else if (enterroom.trim().toLowerCase( ) === "no") {
             alert("Go back down the hall and go home.")
+        } else {
+          alert("That wasn't a valid choice. Refresh the page to start over.")
         }
-    }else {
+    }else if (walkdownhall.trim().toLowerCase( ) === "no") {
 
       alert("Sorry go home.")
+    } else {
+      alert("That wasn't a valid choice. Refresh the page to start over.")
     }
 
     </script>
